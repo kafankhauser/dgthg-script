@@ -13,4 +13,4 @@ print("Current working directory: {0}".format(cwd))
 #import data set
 import pandas as pd
 
-df = pd.read_excel (r'X:/Users/kathi/Desktop/dgthg/TAA_Kathi_DGTHG_anonymisiert.xlsx')
+df = pd.read_excel ('/Users/kathi/Desktop/dgthg/TAA_Kathi_DGTHG_anonymisiert.xlsx')
