@@ -1,0 +1,23 @@
+df = pd.read_excel() #import xlsx dataset with pandas
+df.head() # first five columns
+df.tail() # last five columns
+df.info() # short info on data set
+df.index() # list of indices
+df.columns.tolist() #print column names as list
+df.rename(columns={'old_name':'new_name', ...}, inplace=True) #rename columns
+df.isnull().sum() # check how many nulls are in the data set
+df.describe() #give descriptive of every column
+
+df['column'] #select column
+df[['column1', 'column2']] # select multiple columns
+
+df.set_index('column1', inplace=True) #select a certain column as index
+df.iloc[index] # select row by index number
+
+#filter data based on condition
+condition = df.['column1'] == 'value1' #create a condition
+print(condition)
+df[condition] #apply condition
+
+#filter data based on multiple conditions
+df[(df['columns1']=='value1') & (df_can['condition2']=='value2')]
