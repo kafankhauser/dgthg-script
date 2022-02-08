@@ -25,3 +25,12 @@ df_to_plot.plot(kind = xxx)
 #pie for pie plots
 #scatter for scatter plots
 #hexbin for hexbin plot
+
+df.plot(kind='xxx',
+             figsize=(20, 10))  # pass a tuple (x, y) size
+
+plt.title('Title')
+plt.ylabel('label for x-axis')
+plt.xlabel('label for y-axis')
+
+plt.show()
