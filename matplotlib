@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 #check version of matplotlib
 print('Matplotlib version: ', mpl.__version__)
 
+#change style of matplotlib, i.e. to 'ggplot'
+mpl.style.use('ggplot')
+
 #select a dataframe including to columns
 df_to_plot = df[['column1', 'column2']]
 
