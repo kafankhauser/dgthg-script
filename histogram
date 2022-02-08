@@ -1,0 +1,16 @@
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+df_t.plot(kind ='hist', 
+          figsize=(xxx, xxx),
+          bins=xxx,
+          alpha=xxx,
+          xticks=bin_edges,
+          color=['xxx', 'xxx', 'xxx']
+         )
+
+plt.title('Titel')
+plt.ylabel('Y Label')
+plt.xlabel('X Label')
+
+plt.show()
