@@ -1,0 +1,24 @@
+# load matplotlib
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+#check version of matplotlib
+print('Matplotlib version: ', mpl.__version__)
+
+#select a dataframe including to columns
+df_to_plot = df[['column1', 'column2']]
+
+#plot the dataframe
+df_to_plot.plot(kind = xxx)
+
+# possible kinds for .plot()
+#line for line bars
+#bar for vertical bar plots
+#barh for horizontal bar plots
+#hist for histogram
+#box for boxplot
+#kde or density for density plots
+#area for area plots
+#pie for pie plots
+#scatter for scatter plots
+#hexbin for hexbin plot
