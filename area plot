@@ -1,0 +1,10 @@
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+ax = df.plot(kind='area',
+             alpha=xxxx,  # set transparency
+             figsize=(xx, xx)) # set figure size
+
+ax.set_title('Titel')
+ax.set_ylabel('Y Label')
+ax.set_xlabel('X Label')
