@@ -8,6 +8,8 @@ df.rename(columns={'old_name':'new_name', ...}, inplace=True) #rename columns
 df.isnull().sum() # check how many nulls are in the data set
 df.describe() #give descriptive of every column
 
+df.drop(['column1', 'column2'], axis=1, inplace=True) # drop columns, 0 is index, 1 is column
+
 df['column'] #select column
 df[['column1', 'column2']] # select multiple columns
 
