@@ -1,0 +1,30 @@
+# create basic bar plot
+
+df.plot(kind='bar', figsize=(xx, xx)) # change figure size
+plt.xlabel('X Label') # add to x-label to the plot
+plt.ylabel('Y Label') # add y-label to the plot
+plt.title('Titel') # add title to the plot
+plt.show()
+
+# use annotate method of the scripting layer or the pyplot interface
+plt.annotate(xx=xx,  
+             xx=xx)
+
+arguments for .annotate()
+s: str, the text of annotation.
+xy: Tuple specifying the (x,y) point to annotate (in this case, end point of arrow).
+xytext: Tuple specifying the (x,y) point to place the text (in this case, start point of arrow).
+xycoords: The coordinate system that xy is given in - 'data' uses the coordinate system of the object being annotated (default).
+arrowprops: Takes a dictionary of properties to draw the arrow:
+arrowstyle: Specifies the arrow style, '->' is standard arrow.
+connectionstyle: Specifies the connection type. arc3 is a straight line.
+color: Specifies color of arrow.
+lw: Specifies the line width.
+
+# use annota() to display text element
+plt.annotate('Text to display',  # text to display
+             xy=(xx, xx),  # start the text at at point 
+             rotation=xx,  # based on trial and error to match the arrow
+             va='bottom',  # want the text to be vertically 'bottom' aligned
+             ha='left',  # want the text to be horizontally 'left' algned.
+             )
