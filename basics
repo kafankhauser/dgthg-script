@@ -9,6 +9,7 @@ df.isnull().sum() # check how many nulls are in the data set
 df.describe() #give descriptive of every column
 
 df.drop(['column1', 'column2'], axis=1, inplace=True) # drop columns, 0 is index, 1 is column
+df_can.columns = list(map(str, df_can.columns) #change all columns to type string
 
 df['column'] #select column
 df[['column1', 'column2']] # select multiple columns
