@@ -1,0 +1,9 @@
+df_sample = df_can.loc[['Group'], Rows] # create a sample data frame
+
+df_sample.describe() # describe the data frame
+
+# create the boxplot
+df_sample.plot(kind='box', figsize=(xx, xx), color='xx', vert=False) # use vert = T to create verticale boxplot
+plt.title('Titel')
+plt.xlabel('X Axis Label')
+plt.show()
