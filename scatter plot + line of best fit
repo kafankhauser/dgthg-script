@@ -1,0 +1,11 @@
+#create scatter plot with sample data set
+df_sample.plot(kind='scatter', x='x variable', y='y variable', figsize=(xx, xx), color='xx')
+plt.title('Titel')
+plt.xlabel('X Label')
+plt.ylabel('Y Label')
+
+# plot line of best fit
+plt.plot(x, fit[0] * x + fit[1], color='red') 
+plt.annotate('y={0:.0f} x + {1:.0f}'.format(fit[0], fit[1]), xy=(2000, 150000))
+plt.show()
+
