@@ -1,0 +1,5 @@
+# download kaggle dataset w/o API token in jupyter notebook
+
+!pip install opendatasets
+import opendatasets as od
+od.download("https://www.kaggle.com/aayush9753/singlecell-rnaseq-data-from-mouse-brain")
