@@ -7,7 +7,7 @@ from sklearn import preprocessing
 X = preprocessing.StandardScaler().fit(X).transform(X)
 
 # define outcome
-y = np.asarray(churn_df['outcome_column'])
+y = np.asarray(churn_df['outcome_column']) # must be binary
 
 # create test and train data set
 from sklearn.model_selection import train_test_split
