@@ -1,0 +1,27 @@
+import numpy as np 
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+
+# get features (.values() deletes the column names)
+X = my_data[['column1', 'column2',...]].values 
+# Sklearn Decision Trees can't handle categorical data so its important to recode them as numerical
+
+#create outcome variable
+Y = df['outcome_variable']
+
+# create test und train set
+from sklearn.model_selection import train_test_split
+X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
+
+
+# create decision Tree
+Tree = DecisionTreeClassifier(criterion="entropy", max_depth = 4)
+Tree.fit(X_trainset,y_trainset)
+
+# Prediction
+Tree_prediction = Tree.predict(X_testset)
+
+# Evaluate model
+from sklearn import metrics
+import matplotlib.pyplot as plt
+print("DecisionTrees's Accuracy: ", metrics.accuracy_score(y_testset, Tree_prediction))
