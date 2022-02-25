@@ -9,3 +9,10 @@ X = df.values() # select values
 X = np.nan_to_num(X) 
 Clus_dataSet = StandardScaler().fit_transform(X) # create normalized data
 Clus_dataSet
+
+# modeling
+clusterNum = 3
+k_means = KMeans(init = "k-means++", n_clusters = clusterNum, n_init = 12)
+k_means.fit(X)
+labels = k_means.labels_
+print(labels)
