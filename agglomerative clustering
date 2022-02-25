@@ -1,0 +1,34 @@
+
+from sklearn.preprocessing import MinMaxScaler
+
+#select features
+x = df.values
+
+#scale all features on a scale from 0-1
+min_max_scaler = MinMaxScaler()
+feature_mtx = min_max_scaler.fit_transform(x)
+
+
+# clustering with skimpy
+import scipy
+leng = feature_mtx.shape[0]
+D = scipy.zeros([leng,leng]) # create distance matrix
+for i in range(leng):
+    for j in range(leng):
+        D[i,j] = scipy.spatial.distance.euclidean(feature_mtx[i], feature_mtx[j])
+
+import pylab
+import scipy.cluster.hierarchy
+Z = hierarchy.linkage(D, 'complete')
+
+#use max_d as cutting line
+from scipy.cluster.hierarchy import fcluster
+max_d = 3
+clusters = fcluster(Z, max_d, criterion='distance')
+clusters
+
+# determine numbers of cluster
+from scipy.cluster.hierarchy import fcluster
+k = 5
+clusters = fcluster(Z, k, criterion='maxclust')
+clusters
